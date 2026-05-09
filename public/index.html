@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Óleos Essenciais Brasil - doTERRA Óleos Essenciais | Consultor de Bem-Estar</title>
+  <meta name="description" content="Óleos Essenciais Brasil: informações independentes sobre óleos essenciais puros e naturais. Redirecionamento para a loja oficial.">
+  <meta property="og:title" content="Óleos Essenciais Brasil - Óleos essenciais puros e naturais">
+  <meta property="og:description" content="Informações independentes sobre óleos essenciais puros e naturais.">
+  <meta property="og:url" content="https://shop.doterra.com/BR/pt_BR/shop/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Óleos Essenciais Brasil">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --c-primary: #5b2d8e;
+      --c-primary-light: #7b4db5;
+      --c-primary-dark: #3d1a6e;
+      --c-bg: #fafafe;
+      --c-surface: #ffffff;
+      --c-text: #1a1a2e;
+      --c-text-light: #666;
+      --c-border: #e8e8f0;
+      --c-accent: #c44545;
+      --c-success: #2ecc71;
+      --c-trust-bg: #2a1050;
+      --c-trust-text: rgba(255,255,255,0.9);
+      --radius: 16px;
+      --radius-sm: 10px;
+      --shadow: 0 2px 20px rgba(91,45,142,0.08);
+      --shadow-hover: 0 8px 40px rgba(91,45,142,0.15);
+      --font: 'Inter', -apple-system, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--c-bg); color: var(--c-text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    /* Trust Bar */
+    .trust-bar {
+      background: var(--c-trust-bg);
+      color: var(--c-trust-text);
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .trust-bar span { white-space: nowrap; }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--c-border);
+      padding: 0 24px;
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+    .nav-logo {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--c-primary);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    .nav-links { display: flex; gap: 24px; align-items: center; }
+    .nav-links a {
+      color: var(--c-text);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--c-primary); }
+    .nav-cart {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: none;
+      border: 2px solid var(--c-primary);
+      color: var(--c-primary);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .nav-cart:hover { background: var(--c-primary); color: white; }
+    .nav-cart svg { width: 18px; height: 18px; }
+    .cart-count {
+      background: var(--c-accent);
+      color: white;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+    .hamburger svg { width: 24px; height: 24px; stroke: var(--c-text); }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #f0e6ff 0%, #e8d5f5 50%, #f5f0ff 100%);
+      padding: 80px 24px;
+      text-align: center;
+    }
+    .hero-inner { max-width: 700px; margin: 0 auto; }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--c-primary-dark);
+      line-height: 1.1;
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--c-text-light);
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--c-primary);
+      color: white;
+      padding: 16px 36px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+    .cta-btn:hover { background: var(--c-primary-dark); transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+    .cta-btn svg { width: 20px; height: 20px; }
+
+    /* Social Proof */
+    .social-proof {
+      padding: 48px 24px;
+      background: white;
+    }
+    .social-proof .inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      text-align: center;
+    }
+    .proof-item { padding: 16px; }
+    .proof-item .icon { font-size: 24px; margin-bottom: 8px; color: var(--c-primary); }
+    .proof-item strong { display: block; font-size: 14px; color: var(--c-text); margin-bottom: 4px; }
+    .proof-item span { font-size: 12px; color: var(--c-text-light); }
+
+    /* Products Section */
+    .section {
+      padding: 64px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .section-header h2 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--c-primary-dark);
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+    .section-header p {
+      font-size: 1.05rem;
+      color: var(--c-text-light);
+    }
+
+    /* Controls */
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 32px;
+      align-items: center;
+    }
+    .filter-pill {
+      padding: 8px 20px;
+      border-radius: 50px;
+      border: 1.5px solid var(--c-border);
+      background: white;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: var(--c-text);
+    }
+    .filter-pill:hover { border-color: var(--c-primary); color: var(--c-primary); }
+    .filter-pill.active { background: var(--c-primary); color: white; border-color: var(--c-primary); }
+    .search-input {
+      padding: 8px 16px;
+      border-radius: 50px;
+      border: 1.5px solid var(--c-border);
+      font-size: 13px;
+      width: 200px;
+      outline: none;
+      font-family: var(--font);
+    }
+    .search-input:focus { border-color: var(--c-primary); }
+
+    /* Product Grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    /* Product Card */
+    .product-card {
+      background: var(--c-surface);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: all 0.3s;
+      border: 1px solid var(--c-border);
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+    .product-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      min-height: 180px;
+      background: #fafafe;
+    }
+    .product-img img {
+      max-height: 140px;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .product-info {
+      padding: 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--c-text);
+      margin-bottom: 2px;
+      line-height: 1.3;
+    }
+    .product-name-en {
+      font-size: 12px;
+      color: var(--c-text-light);
+      margin-bottom: 8px;
+    }
+    .product-desc {
+      font-size: 12px;
+      color: var(--c-text-light);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+    .product-meta {
+      margin-top: auto;
+    }
+    .price-block {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+    .price-label {
+      font-size: 10px;
+      color: var(--c-text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .price-wholesale {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--c-primary);
+    }
+    .price-retail {
+      font-size: 13px;
+      color: #999;
+      text-decoration: line-through;
+    }
+    .price-badge {
+      font-size: 11px;
+      font-weight: 600;
+      color: white;
+      background: var(--c-accent);
+      padding: 2px 8px;
+      border-radius: 50px;
+    }
+    .product-size {
+      font-size: 12px;
+      color: var(--c-text-light);
+      margin-bottom: 12px;
+    }
+    .add-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      padding: 10px;
+      background: var(--c-primary);
+      color: white;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: var(--font);
+    }
+    .add-btn:hover { background: var(--c-primary-dark); }
+    .add-btn svg { width: 16px; height: 16px; }
+
+    /* Blends Sections */
+    .blends-section {
+      padding: 64px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .blends-section .section-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .blends-section .section-header h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--c-primary-dark);
+    }
+
+    /* CTA Banner */
+    .cta-banner {
+      background: linear-gradient(135deg, #f0e6ff 0%, #e8d5f5 100%);
+      padding: 64px 24px;
+      text-align: center;
+    }
+    .cta-banner h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--c-primary-dark);
+      margin-bottom: 12px;
+    }
+    .cta-banner p {
+      color: var(--c-text-light);
+      margin-bottom: 24px;
+      font-size: 1.05rem;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--c-trust-bg);
+      color: rgba(255,255,255,0.8);
+      padding: 48px 24px;
+      text-align: center;
+    }
+    .footer-brand {
+      font-size: 20px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 12px;
+    }
+    .footer p {
+      font-size: 13px;
+      margin-bottom: 8px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+    .footer-links {
+      margin-top: 20px;
+      font-size: 12px;
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      margin: 0 8px;
+    }
+    .footer-links a:hover { color: white; }
+
+    /* Cart Overlay */
+    .cart-overlay {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 2000;
+      display: none;
+      justify-content: flex-end;
+    }
+    .cart-overlay.open { display: flex; }
+    .cart-sidebar {
+      width: 400px;
+      max-width: 90vw;
+      background: white;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      box-shadow: -4px 0 30px rgba(0,0,0,0.15);
+    }
+    .cart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--c-border);
+    }
+    .cart-header h3 { font-size: 18px; font-weight: 700; }
+    .cart-close {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .cart-close svg { width: 20px; height: 20px; stroke: var(--c-text); }
+    .cart-items {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px 24px;
+    }
+    .cart-empty {
+      text-align: center;
+      padding: 48px 24px;
+      color: var(--c-text-light);
+    }
+    .cart-empty svg { width: 48px; height: 48px; stroke: #ddd; margin-bottom: 12px; }
+    .cart-item {
+      display: flex;
+      gap: 12px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--c-border);
+      align-items: center;
+    }
+    .cart-item-img {
+      width: 50px;
+      height: 70px;
+      object-fit: contain;
+      border-radius: 8px;
+      background: #fafafe;
+    }
+    .cart-item-info { flex: 1; }
+    .cart-item-name { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+    .cart-item-size { font-size: 12px; color: var(--c-text-light); margin-bottom: 4px; }
+    .cart-item-price { font-size: 15px; font-weight: 700; color: var(--c-primary); }
+    .cart-item-qty {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 6px;
+    }
+    .qty-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid var(--c-border);
+      background: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .qty-btn:hover { background: #f5f5f5; }
+    .cart-item-remove {
+      background: none;
+      border: none;
+      color: var(--c-accent);
+      font-size: 12px;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .cart-footer {
+      padding: 20px 24px;
+      border-top: 1px solid var(--c-border);
+      background: #fafafe;
+    }
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .checkout-btn {
+      width: 100%;
+      padding: 14px;
+      background: var(--c-primary);
+      color: white;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: var(--font);
+    }
+    .checkout-btn:hover { background: var(--c-primary-dark); }
+    .checkout-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .cart-note {
+      text-align: center;
+      font-size: 11px;
+      color: var(--c-text-light);
+      margin-top: 12px;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--c-primary-dark);
+      color: white;
+      padding: 12px 24px;
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      font-weight: 500;
+      z-index: 3000;
+      transition: transform 0.3s;
+      white-space: nowrap;
+    }
+    .toast.show { transform: translateX(-50%) translateY(0); }
+
+    /* Checkout Modal */
+    .checkout-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 2500;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+    .checkout-modal-overlay.open { display: flex; }
+    .checkout-modal {
+      background: white;
+      border-radius: var(--radius);
+      padding: 40px;
+      max-width: 480px;
+      width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .checkout-modal h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--c-primary-dark);
+    }
+    .checkout-modal p {
+      font-size: 14px;
+      color: var(--c-text-light);
+      margin-bottom: 24px;
+    }
+    .checkout-modal label {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 4px;
+      color: var(--c-text);
+    }
+    .checkout-modal input {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1.5px solid var(--c-border);
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      margin-bottom: 16px;
+      font-family: var(--font);
+      outline: none;
+    }
+    .checkout-modal input:focus { border-color: var(--c-primary); }
+    .modal-submit {
+      width: 100%;
+      padding: 14px;
+      background: var(--c-primary);
+      color: white;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-bottom: 12px;
+      font-family: var(--font);
+    }
+    .modal-submit:hover { background: var(--c-primary-dark); }
+    .modal-skip {
+      display: block;
+      text-align: center;
+      color: var(--c-text-light);
+      font-size: 13px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      width: 100%;
+      padding: 8px;
+      font-family: var(--font);
+    }
+    .modal-skip:hover { color: var(--c-primary); }
+
+    /* Cookie Banner */
+    .cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      border-top: 1px solid var(--c-border);
+      padding: 16px 24px;
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      box-shadow: 0 -2px 20px rgba(0,0,0,0.1);
+    }
+    .cookie-banner button {
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: var(--font);
+    }
+    .cookie-accept {
+      background: var(--c-primary);
+      color: white;
+      border: none;
+    }
+    .cookie-decline {
+      background: white;
+      color: var(--c-text);
+      border: 1.5px solid var(--c-border);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .product-card {
+      animation: fadeInUp 0.5s ease both;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background: white; padding: 16px 24px; border-bottom: 1px solid var(--c-border); }
+      .hamburger { display: block; }
+      .hero h1 { font-size: 2rem; }
+      .hero { padding: 48px 24px; }
+      .section-header h2 { font-size: 1.8rem; }
+      .product-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .social-proof .inner { grid-template-columns: repeat(2, 1fr); }
+      .trust-bar { font-size: 11px; gap: 12px; }
+    }
+    @media (max-width: 480px) {
+      .product-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Trust Bar -->
+  <div class="trust-bar">
+    <span>&#10003; 25% de desconto para membros</span>
+    <span>&#9733; Sem compromisso, cancele quando quiser</span>
+    <span>&#9829; Pureza certificada CPTG</span>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" onclick="scrollToTop();return false">Oleos Essenciais.</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#products" onclick="closeMenu()">Produtos</a>
+        <a href="#blends" onclick="closeMenu()">Misturas</a>
+      </div>
+      <button class="nav-cart" onclick="toggleCart()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+        Carrinho
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" onclick="toggleMenu()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Descubra o Poder da Natureza</h1>
+      <p>Óleos essenciais puros e naturais para o seu bem-estar. Cada óleo é obtido de forma sustentável e testado para a mais alta pureza.</p>
+      <a href="#products" class="cta-btn">
+        Descubra agora
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <div class="social-proof">
+    <div class="inner">
+      <div class="proof-item">
+        <div class="icon">&#10003;</div>
+        <strong>CPTG CERTIFICADO</strong>
+        <span>Máxima Garantia de Pureza</span>
+      </div>
+      <div class="proof-item">
+        <div class="icon">&#127807;</div>
+        <strong>100% Natural</strong>
+        <span>Sem Aditivos</span>
+      </div>
+      <div class="proof-item">
+        <div class="icon">&#128666;</div>
+        <strong>Envio Rápido</strong>
+        <span>Direto da doTERRA</span>
+      </div>
+      <div class="proof-item">
+        <div class="icon">&#128172;</div>
+        <strong>Consultoria Personalizada</strong>
+        <span>Seu Consultor de Produtos</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Products Section -->
+  <section id="products" class="section">
+    <div class="section-header">
+      <h2>Nossos Óleos Essenciais</h2>
+      <p>Descubra os óleos mais puros do mundo - direto da natureza para você</p>
+    </div>
+    <div class="controls">
+      <button class="filter-pill active" onclick="setFilter('all')">Todos</button>
+      <button class="filter-pill " onclick="setFilter('popular')">Populares</button>
+      <button class="filter-pill " onclick="setFilter('citrus')">Cítricos</button>
+      <button class="filter-pill " onclick="setFilter('floral')">Florais</button>
+      <button class="filter-pill " onclick="setFilter('wellness')">Bem-Estar</button>
+      <button class="filter-pill " onclick="setFilter('spice')">Especiarias</button>
+      <button class="filter-pill " onclick="setFilter('premium')">Premium</button>
+      <button class="filter-pill " onclick="setFilter('woodsy')">Amadeirados</button>
+      <input type="text" id="searchInput" class="search-input" placeholder="Buscar óleos..." oninput="renderProducts()">
+    </div>
+    <div class="product-grid" id="productGrid"></div>
+  </section>
+
+  <!-- Blends Section -->
+  <section id="blends" class="blends-section">
+    <div class="section-header">
+      <h2>Misturas de Óleos</h2>
+    </div>
+    <div class="product-grid" id="blendsGrid"></div>
+  </section>
+
+  <!-- Roll-Ons Section -->
+  <section id="rollons" class="blends-section">
+    <div class="section-header">
+      <h2>Roll-Ons</h2>
+    </div>
+    <div class="product-grid" id="rollonsGrid"></div>
+  </section>
+
+  <!-- Supplements Section -->
+  <section id="supplements" class="blends-section">
+    <div class="section-header">
+      <h2>Suplementos</h2>
+    </div>
+    <div class="product-grid" id="supplementsGrid"></div>
+  </section>
+
+  <!-- MetaPWR Section -->
+  <section id="metapwr" class="blends-section">
+    <div class="section-header">
+      <h2>MetaPWR&trade;</h2>
+    </div>
+    <div class="product-grid" id="metapwrGrid"></div>
+  </section>
+
+  <!-- ZenGest Section -->
+  <section id="zengest" class="blends-section">
+    <div class="section-header">
+      <h2>ZenGest&trade;</h2>
+    </div>
+    <div class="product-grid" id="zengestGrid"></div>
+  </section>
+
+  <!-- On Guard Section -->
+  <section id="onguard" class="blends-section">
+    <div class="section-header">
+      <h2>On Guard&trade;</h2>
+    </div>
+    <div class="product-grid" id="onguardGrid"></div>
+  </section>
+
+  <!-- Deep Blue Section -->
+  <section id="deepblue" class="blends-section">
+    <div class="section-header">
+      <h2>Deep Blue&trade;</h2>
+    </div>
+    <div class="product-grid" id="deepblueGrid"></div>
+  </section>
+
+  <!-- Air Section -->
+  <section id="air" class="blends-section">
+    <div class="section-header">
+      <h2>doTERRA Air&trade;</h2>
+    </div>
+    <div class="product-grid" id="airGrid"></div>
+  </section>
+
+  <!-- Kits Section -->
+  <section id="kits" class="blends-section">
+    <div class="section-header">
+      <h2>Kits Iniciais & Pacotes</h2>
+    </div>
+    <div class="product-grid" id="kitsGrid"></div>
+  </section>
+
+  <!-- CTA Banner -->
+  <div class="cta-banner">
+    <h2>Pronto para o bem-estar natural?</h2>
+    <p>Comece hoje com os oleos essenciais mais puros do mundo. Consultoria personalizada inclusa.</p>
+    <a href="#products" class="cta-btn">Descubra os óleos</a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-brand">Óleos Essenciais Brasil - Consultor Independente</div>
+    <p>Se tiver dúvidas, estou a disposição - de forma pessoal e competente.</p>
+    <p style="font-size:11px;opacity:0.7;">Estes produtos não se destinam a diagnosticar, tratar, curar ou prevenir doenças. As declarações nesta página não foram avaliadas por órgão regulador.</p>
+    <p style="font-size:12px;margin-top:16px;">&copy; 2024 - Consultor Independente doTERRA</p>
+    <div class="footer-links">
+      <span>Consultor Independente doTERRA - Pedidos realizados no site oficial da doTERRA</span>
+    </div>
+  </footer>
+
+  <!-- Cart Overlay -->
+  <div id="cartOverlay" class="cart-overlay" onclick="toggleCart()">
+    <div class="cart-sidebar" onclick="event.stopPropagation()">
+      <div class="cart-header">
+        <h3>Seu Carrinho</h3>
+        <button class="cart-close" onclick="toggleCart()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <div class="cart-empty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+          <p>Seu carrinho está vazio</p>
+        </div>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Total</span>
+          <span id="cartTotal">R$ 0,00</span>
+        </div>
+        <button class="checkout-btn" id="checkoutBtn" onclick="checkout()" disabled>Torne-se membro & economize 25% &rarr;</button>
+        <div class="cart-note">Informação independente &middot; Compra direto em shop.doterra.com</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div id="checkoutModal" class="checkout-modal-overlay" onclick="closeCheckoutModal()">
+    <div class="checkout-modal" onclick="event.stopPropagation()">
+      <h3>Quase lá!</h3>
+      <p>Preencha seus dados para que estejam prontos no checkout da doTERRA.</p>
+      <form id="checkoutForm" onsubmit="submitCheckout(event)">
+        <label>Nome</label>
+        <input type="text" id="cfFirst" placeholder="Nome">
+        <label>Sobrenome</label>
+        <input type="text" id="cfLast" placeholder="Sobrenome">
+        <label>E-mail</label>
+        <input type="email" id="cfEmail" placeholder="seu@email.com">
+        <label>Telefone (opcional)</label>
+        <input type="tel" id="cfPhone" placeholder="(00) 00000-0000">
+        <label>Endereco</label>
+        <input type="text" id="cfStreet" placeholder="Rua e numero">
+        <label>CEP</label>
+        <input type="text" id="cfZip" placeholder="00000-000">
+        <label>Cidade</label>
+        <input type="text" id="cfCity" placeholder="Cidade">
+        <button type="submit" class="modal-submit">Ir para o checkout seguro</button>
+      </form>
+      <button class="modal-skip" onclick="skipCheckout()">Continuar sem dados &rarr;</button>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Cookie Banner -->
+  <div id="cookieBanner" class="cookie-banner" style="display:none;">
+    <span>Utilizamos cookies tecnicamente necessários e cookies de analise opcionais para entender o uso do site. Você pode aceitar ou recusar a qualquer momento.</span>
+    <button class="cookie-decline" onclick="declineCookies()">Recusar</button>
+    <button class="cookie-accept" onclick="acceptCookies()">Aceitar</button>
+  </div>
+
+  <!-- Main Script -->
+  <script>
+    // ============================================================
+    // CONFIG
+    // ============================================================
+    var CONFIG = {
+      ownerID: '15947182',
+      country: 'BR',
+      lang: 'pt_BR',
+      currency: 'BRL',
+      symbol: 'R$',
+      locale: 'pt-BR',
+      shopBase: 'https://shop.doterra.com/BR/pt_BR/shop/',
+      i18n: {
+        siteTitle: 'Óleos Essenciais Brasil',
+        heroTitle: 'Descubra o Poder da Natureza',
+        heroSubtitle: 'Óleos essenciais puros e naturais para o seu bem-estar',
+        heroButton: 'Descubra agora',
+        navHome: 'Inicio',
+        navProducts: 'Produtos',
+        navCart: 'Minha Selecao',
+        sectionPopular: 'Óleos Populares',
+        sectionAll: 'Todos os Óleos',
+        sectionBlends: 'Misturas de Óleos',
+        addToCart: 'Economize 25%',
+        removeFromCart: 'Remover',
+        cartEmpty: 'Seu carrinho está vazio',
+        cartTotal: 'Total Membro',
+        quantity: 'Quantidade',
+        checkout: 'Torne-se membro & economize 25%',
+        checkoutNote: 'Na próxima página você se tornará membro doTERRA e receberá 25% de desconto em todos os produtos - sem compromisso, cancele quando quiser.',
+        searchPlaceholder: 'Buscar óleos...',
+        filterAll: 'Todos',
+        filterPopular: 'Populares',
+        filterCitrus: 'Cítricos',
+        filterFloral: 'Florais',
+        filterWellness: 'Bem-Estar',
+        filterSpice: 'Especiarias',
+        filterPremium: 'Premium',
+        filterBlends: 'Misturas',
+        filterWoodsy: 'Amadeirados',
+        footerText: 'Consultor Independente doTERRA - Pedidos realizados no site oficial da doTERRA',
+        footerDisclaimer: 'Estas informações não substituem aconselhamento médico. Consulte sempre um profissional de saude.',
+        currency: 'BRL',
+        currencySymbol: 'R$'
+      }
+    };
+
+    // ============================================================
+    // PRODUCT DATA
+    // ============================================================
+    var PRODUCTS = [
+        {"id": "lavender", "name": "Lavender (Lavanda)", "nameEn": "Lavender", "itemField": "ITEM_11301__C5318", "price": 271.31, "wholesale": 203.5, "size": "15 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/single-oils/lavender15ml-thumbnail-84x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/single-oils/lavender15ml-thumbnail-84x225-eu.png", "desc": "", "category": "popular"},
+        {"id": "peppermint", "name": "Peppermint (Hortelã-Pimenta)", "nameEn": "Peppermint", "itemField": "ITEM_10955__C5324", "price": 225.5, "wholesale": 169.12, "size": "15 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/single-oils/peppermint15ml-thumbnail-84x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/single-oils/peppermint15ml-thumbnail-84x225-eu.png", "desc": "", "category": "popular"},
+        {"id": "lemon", "name": "Lemon (Limão)", "nameEn": "Lemon", "itemField": "ITEM_11300__C5151", "price": 132.0, "wholesale": 99.0, "size": "15 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/single-oils/lemon15ml-thumbnail-84x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/single-oils/lemon15ml-thumbnail-84x225-eu.png", "desc": "", "category": "citrus"},
+        {"id": "frankincense", "name": "Frankincense (Olíbano)", "nameEn": "Frankincense", "itemField": "ITEM_11304__C5314", "price": 700.31, "wholesale": 525.25, "size": "15 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/single-oils/frankincense15ml-thumbnail-84x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/single-oils/frankincense15ml-thumbnail-84x225-eu.png", "desc": "", "category": "premium"},
+        {"id": "cinnamon-bark", "name": "Cinnamon Bark (Canela)", "nameEn": "Cinnamon Bark", "itemField": "ITEM_12673__C5609", "price": 260.31, "wholesale": 195.25, "size": "5 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/single-oils/cinnamon5ml-thumbnail-67x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/single-oils/cinnamon5ml-thumbnail-67x225-eu.png", "desc": "", "category": "spice"},
+        {"id": "tea-tree", "name": "Tea Tree (Melaleuca)", "nameEn": "Tea Tree", "itemField": "ITEM_11303__C5321", "price": 214.5, "wholesale": 160.88, "size": "15 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/single-oils/teatree15ml-thumbnail-84x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/single-oils/teatree15ml-thumbnail-84x225-eu.png", "desc": "", "category": "popular"},
+        {"id": "wild-orange", "name": "Wild Orange (Laranja Selvagem)", "nameEn": "Wild Orange", "itemField": "ITEM_11299__C5371", "price": 122.87, "wholesale": 92.18, "size": "15 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/single-oils/wildorange15ml-thumbnail-84x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/single-oils/wildorange15ml-thumbnail-84x225-eu.png", "desc": "", "category": "citrus"},
+        {"id": "doterra-air", "name": "dōTERRA Air™", "nameEn": "dōTERRA Air™", "itemField": "ITEM_11935__C5319", "price": 262.13, "wholesale": 196.62, "size": "15 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/air/air15ml-thumbnail-84x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/air/air15ml-thumbnail-84x225-eu.png", "desc": "", "category": "wellness"},
+        {"id": "doterra-cheer", "name": "dōTERRA Cheer™", "nameEn": "dōTERRA Cheer™", "itemField": "ITEM_25034__C5427", "price": 234.69, "wholesale": 176.0, "size": "5 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/cheer5ml-thumbnail-67x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/cheer5ml-thumbnail-67x225-eu.png", "desc": "", "category": "floral"},
+        {"id": "deep-blue", "name": "Deep Blue™", "nameEn": "Deep Blue™", "itemField": "ITEM_28799__C6493", "price": 322.63, "wholesale": 241.95, "size": "5 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue5ml-thumbnail-67x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue5ml-thumbnail-67x225-eu.png", "desc": "", "category": "wellness"},
+        {"id": "doterra-adaptiv", "name": "dōTERRA Adaptiv™", "nameEn": "dōTERRA Adaptiv™", "itemField": "ITEM_16037__C6698", "price": 374.06, "wholesale": 280.5, "size": "15 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/adaptiv-15ml-thumbnail-84x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/adaptiv-15ml-thumbnail-84x225-eu.png", "desc": "", "category": "wellness"},
+        {"id": "doterra-serenity", "name": "dōTERRA Serenity™", "nameEn": "dōTERRA Serenity™", "itemField": "ITEM_24957__C49", "price": 357.56, "wholesale": 268.12, "size": "15 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/serenity15ml-thumbnail-84x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/serenity15ml-thumbnail-84x225-eu.png", "desc": "", "category": "floral"},
+        {"id": "doterra-balance", "name": "dōTERRA Balance™", "nameEn": "dōTERRA Balance™", "itemField": "ITEM_12064__C5807", "price": 221.81, "wholesale": 166.38, "size": "15 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/balance-thumbnail-81x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/balance-thumbnail-81x225-eu.png", "desc": "", "category": "woodsy"},
+        {"id": "doterra-anchor", "name": "dōTERRA Anchor™", "nameEn": "dōTERRA Anchor™", "itemField": "ITEM_12685__C6576", "price": 192.5, "wholesale": 144.38, "size": "5 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/anchor5ml-thumbnail-67x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/anchor5ml-thumbnail-67x225-eu.png", "desc": "", "category": "woodsy"},
+        {"id": "doterra-purify", "name": "dōTERRA Purify™", "nameEn": "dōTERRA Purify™", "itemField": "ITEM_13365__C5737", "price": 221.81, "wholesale": 166.38, "size": "15 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/purify15ml-thumbnail-84x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/purify15ml-thumbnail-84x225-eu.png", "desc": "", "category": "wellness"},
+        {"id": "on-guard", "name": "On Guard™", "nameEn": "On Guard™", "itemField": "ITEM_11302__C5153", "price": 331.87, "wholesale": 248.93, "size": "15 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/on-guard/onguard15ml-thumbnail-84x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/on-guard/onguard15ml-thumbnail-84x225-eu.png", "desc": "", "category": "popular"},
+        {"id": "zengest", "name": "ZenGest™", "nameEn": "ZenGest™", "itemField": "ITEM_19626__C2894", "price": 315.26, "wholesale": 236.45, "size": "15 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/digestzen/zengest15ml-thumbnail-84x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/digestzen/zengest15ml-thumbnail-84x225-eu.png", "desc": "", "category": "wellness"},
+        {"id": "neroli-touch", "name": "Neroli Touch", "nameEn": "Neroli Touch", "itemField": "ITEM_11968__C5542", "price": 465.69, "wholesale": 349.25, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/single-oils/neroli10ml-thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/single-oils/neroli10ml-thumbnail-50x225-eu.png", "desc": "", "category": "floral"},
+        {"id": "doterra-calmer", "name": "dōTERRA Calmer™", "nameEn": "dōTERRA Calmer™", "itemField": "ITEM_14413__C6192", "price": 196.13, "wholesale": 147.12, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/calmer-thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/calmer-thumbnail-50x225-eu.png", "desc": "", "category": "wellness"},
+        {"id": "intune", "name": "InTune™", "nameEn": "InTune™", "itemField": "ITEM_29115__C5611", "price": 331.87, "wholesale": 248.93, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/intune10ml-thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/intune10ml-thumbnail-50x225-eu.png", "desc": "", "category": "wellness"},
+        {"id": "doterra-pasttense", "name": "dōTERRA PastTense™", "nameEn": "dōTERRA PastTense™", "itemField": "ITEM_28814__C5391", "price": 170.5, "wholesale": 127.88, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/pasttense10ml-thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/pasttense10ml-thumbnail-50x225-eu.png", "desc": "", "category": "wellness"},
+        {"id": "rose-touch", "name": "Rose Touch", "nameEn": "Rose Touch", "itemField": "ITEM_11967__C5531", "price": 630.69, "wholesale": 473.0, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/single-oils/rose10ml-thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/single-oils/rose10ml-thumbnail-50x225-eu.png", "desc": "", "category": "premium"},
+        {"id": "clarycalm", "name": "clarycalm™", "nameEn": "clarycalm™", "itemField": "ITEM_11284__C3261", "price": 306.13, "wholesale": 229.62, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/custom/europe/images/products/essential-oils/blends/clarycalm10ml-thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/custom/europe/images/products/essential-oils/blends/clarycalm10ml-thumbnail-50x225-eu.png", "desc": "", "category": "floral"},
+        {"id": "tea-tree-touch", "name": "Tea Tree Touch", "nameEn": "Tea Tree Touch", "itemField": "ITEM_11977__C2067", "price": 135.69, "wholesale": 101.75, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/single-oils/teatree10ml-thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/single-oils/teatree10ml-thumbnail-50x225-eu.png", "desc": "", "category": "popular"},
+        {"id": "doterra-air-touch", "name": "dōTERRA Air™ Touch", "nameEn": "dōTERRA Air™ Touch", "itemField": "ITEM_11340__C2073", "price": 166.81, "wholesale": 125.12, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/air/air10ml-thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/air/air10ml-thumbnail-50x225-eu.png", "desc": "", "category": "wellness"},
+        {"id": "doterra-air-pastillen", "name": "dōTERRA Air™ Pastilhas", "nameEn": "dōTERRA Air™ Drops", "itemField": "ITEM_13947__C6540", "price": 159.5, "wholesale": 119.62, "size": "30 Pastilhas", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/air/air-drops-thumbnail-285x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/air/air-drops-thumbnail-285x225-eu.png", "desc": "", "category": "wellness"},
+        {"id": "deep-blue-touch", "name": "Deep Blue™ Touch", "nameEn": "Deep Blue™ Touch", "itemField": "ITEM_28774__C2709", "price": 388.69, "wholesale": 291.5, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue10ml-thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue10ml-thumbnail-50x225-eu.png", "desc": "", "category": "wellness"},
+        {"id": "deep-blue-rub", "name": "Deep Blue™ Rub", "nameEn": "Deep Blue™ Rub", "itemField": "ITEM_30063__C408", "price": 333.74, "wholesale": 250.3, "size": "120 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue-rub-thumbnail-285x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue-rub-thumbnail-285x225-eu.png", "desc": "", "category": "wellness"},
+        {"id": "on-guard-touch", "name": "On Guard™ Touch", "nameEn": "On Guard™ Touch", "itemField": "ITEM_11342__C5316", "price": 231.0, "wholesale": 173.25, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/on-guard/onguard10ml-thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/on-guard/onguard10ml-thumbnail-50x225-eu.png", "desc": "", "category": "popular"},
+        {"id": "on-guard-beadlets", "name": "On Guard™ Pastilhas", "nameEn": "On Guard™ Beadlets", "itemField": "ITEM_25037__C5476", "price": 133.87, "wholesale": 100.38, "size": "125 Pastilhas", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/on-guard/onguard-beadlets-thumbnail-285x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/on-guard/onguard-beadlets-thumbnail-285x225-eu.png", "desc": "", "category": "popular"}
+      ];
+
+    var BLENDS = [
+        {"id": "air-x", "name": "Air-X™", "nameEn": "Air-X™", "itemField": "ITEM_22244__C7101", "price": 289.63, "wholesale": 217.25, "size": "15 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/air-x_15ml_thumbnail_285x225.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/air-x_15ml_thumbnail_285x225.png", "desc": "", "category": "single"},
+        {"id": "aromatouch", "name": "AromaTouch™", "nameEn": "AromaTouch™", "itemField": "ITEM_10937__C5323", "price": 267.25, "wholesale": 200.48, "size": "15 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/aromatouch-thumbnail-81x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/aromatouch-thumbnail-81x225-eu.png", "desc": "", "category": "single"},
+        {"id": "doterra-brave", "name": "dōTERRA Brave™", "nameEn": "dōTERRA Brave™", "itemField": "ITEM_14412__C6196", "price": 207.13, "wholesale": 155.38, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/brave-thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/brave-thumbnail-50x225-eu.png", "desc": "", "category": "single"},
+        {"id": "doterra-calmer", "name": "dōTERRA Calmer™", "nameEn": "dōTERRA Calmer™", "itemField": "ITEM_14413__C6192", "price": 196.13, "wholesale": 147.12, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/calmer-thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/calmer-thumbnail-50x225-eu.png", "desc": "", "category": "single"},
+        {"id": "doterra-cheer", "name": "dōTERRA Cheer™", "nameEn": "dōTERRA Cheer™", "itemField": "ITEM_25034__C5427", "price": 234.69, "wholesale": 176.0, "size": "5 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/cheer5ml-thumbnail-67x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/cheer5ml-thumbnail-67x225-eu.png", "desc": "", "category": "single"},
+        {"id": "clarycalm", "name": "ClaryCalm™", "nameEn": "ClaryCalm™", "itemField": "ITEM_11284__C5320", "price": 306.13, "wholesale": 229.62, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/custom/europe/images/products/essential-oils/blends/clarycalm10ml-thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/custom/europe/images/products/essential-oils/blends/clarycalm10ml-thumbnail-50x225-eu.png", "desc": "", "category": "single"},
+        {"id": "ddr-prime-softgels", "name": "DDR Prime™ Softgels", "nameEn": "DDR Prime™ Softgels", "itemField": "ITEM_32299__C619", "price": 438.19, "wholesale": 328.62, "size": "60 Softgels", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/ddrprimesoftgels-thumbnail-285x225-ref25.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/ddrprimesoftgels-thumbnail-285x225-ref25.png", "desc": "", "category": "single"},
+        {"id": "deep-blue", "name": "Deep Blue™", "nameEn": "Deep Blue™", "itemField": "ITEM_28799__C6494", "price": 322.63, "wholesale": 241.95, "size": "5 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue5ml-thumbnail-67x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue5ml-thumbnail-67x225-eu.png", "desc": "", "category": "single"},
+        {"id": "deep-blue-roll-on", "name": "Deep Blue™ Roll-On", "nameEn": "Deep Blue™ Roll-On", "itemField": "ITEM_28778__C2722", "price": 572.06, "wholesale": 429.0, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue-rollon--thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue-rollon--thumbnail-50x225-eu.png", "desc": "", "category": "single"},
+        {"id": "deep-blue-touch", "name": "Deep Blue™ Touch", "nameEn": "Deep Blue™ Touch", "itemField": "ITEM_28774__C2709", "price": 388.69, "wholesale": 291.5, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue10ml-thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue10ml-thumbnail-50x225-eu.png", "desc": "", "category": "single"}
+      ];
+
+    var ROLLONS = [
+        {"id": "blue-lotus-touch", "name": "Blue Lotus Touch", "nameEn": "Blue Lotus Touch", "itemField": "ITEM_31723__C12006", "price": 577.56, "wholesale": 433.12, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/single-oils/bluelotus-touch-10ml-thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/single-oils/bluelotus-touch-10ml-thumbnail-50x225-eu.png", "desc": "", "category": "single"},
+        {"id": "doterra-brave", "name": "dōTERRA Brave™", "nameEn": "dōTERRA Brave™", "itemField": "ITEM_14412__C6196", "price": 207.13, "wholesale": 155.38, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/brave-thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/brave-thumbnail-50x225-eu.png", "desc": "", "category": "single"},
+        {"id": "doterra-calmer", "name": "dōTERRA Calmer™", "nameEn": "dōTERRA Calmer™", "itemField": "ITEM_14413__C6192", "price": 196.13, "wholesale": 147.12, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/calmer-thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/calmer-thumbnail-50x225-eu.png", "desc": "", "category": "single"},
+        {"id": "clarycalm", "name": "ClaryCalm™", "nameEn": "ClaryCalm™", "itemField": "ITEM_11284__C5320", "price": 306.13, "wholesale": 229.62, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/custom/europe/images/products/essential-oils/blends/clarycalm10ml-thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/custom/europe/images/products/essential-oils/blends/clarycalm10ml-thumbnail-50x225-eu.png", "desc": "", "category": "single"},
+        {"id": "deep-blue-touch", "name": "Deep Blue™ Touch", "nameEn": "Deep Blue™ Touch", "itemField": "ITEM_28774__C2709", "price": 388.69, "wholesale": 291.5, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue10ml-thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue10ml-thumbnail-50x225-eu.png", "desc": "", "category": "single"},
+        {"id": "neroli-touch", "name": "Neroli Touch", "nameEn": "Neroli Touch", "itemField": "ITEM_11968__C5542", "price": 465.69, "wholesale": 349.25, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/single-oils/neroli10ml-thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/single-oils/neroli10ml-thumbnail-50x225-eu.png", "desc": "", "category": "single"},
+        {"id": "rose-touch", "name": "Rose Touch", "nameEn": "Rose Touch", "itemField": "ITEM_11967__C5531", "price": 630.69, "wholesale": 473.0, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/single-oils/rose10ml-thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/single-oils/rose10ml-thumbnail-50x225-eu.png", "desc": "", "category": "single"}
+      ];
+
+    var SUPPLEMENTS = [
+        {"id": "eo-mega-plus", "name": "EO Mega™+", "nameEn": "EO Mega™+", "itemField": "ITEM_31418__C11532", "price": 383.13, "wholesale": 287.38, "size": "120 Softgels", "image": "https://prd-evo-content.doterra.com/europe/images/products/supplements/eo-mega-plus-thumbnail-285x225.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/supplements/eo-mega-plus-thumbnail-285x225.png", "desc": "", "category": "single"},
+        {"id": "microplex-vmz-plus", "name": "Microplex VMz™+", "nameEn": "Microplex VMz™+", "itemField": "ITEM_31419__C11533", "price": 322.63, "wholesale": 242.0, "size": "120 Kapseln", "image": "https://prd-evo-content.doterra.com/europe/images/products/supplements/microplex-vmz-plus-thumbnail-285x225.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/supplements/microplex-vmz-plus-thumbnail-285x225.png", "desc": "", "category": "single"},
+        {"id": "wellness-bundle-ohne", "name": "Bundle Bem-Estar", "nameEn": "Bundle Bem-Estar", "itemField": "ITEM_31418__C11532", "price": 995.5, "wholesale": 746.62, "size": "Bundle", "image": "https://prd-evo-content.doterra.com/europe/images/products/supplements/eo-mega-plus-thumbnail-285x225.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/supplements/eo-mega-plus-thumbnail-285x225.png", "desc": "", "category": "single"},
+        {"id": "pb-assist", "name": "PB Assist+™", "nameEn": "PB Assist+™", "itemField": "ITEM_31377__C11312", "price": 263.94, "wholesale": 198.0, "size": "30 Sticks", "image": "https://prd-evo-content.doterra.com/europe/images/products/supplements/pb-assist-sticks-thumbnail-285x225.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/supplements/pb-assist-sticks-thumbnail-285x225.png", "desc": "", "category": "single"},
+        {"id": "pb-restore", "name": "PB Restore™", "nameEn": "PB Restore™", "itemField": "ITEM_31717__C11911", "price": 363.0, "wholesale": 272.25, "size": "30 Cápsulas", "image": "https://prd-evo-content.doterra.com/europe/images/products/supplements/pb-restore-thumbnail-285x225.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/supplements/pb-restore-thumbnail-285x225.png", "desc": "", "category": "single"},
+        {"id": "metapwr-recharge-walderdbeere", "name": "MetaPWR™ Recharge Morango", "nameEn": "MetaPWR™ Recharge Morango", "itemField": "ITEM_31801__C12183", "price": 302.5, "wholesale": 226.88, "size": "30 Sticks", "image": "https://prd-evo-content.doterra.com/europe/images/products/supplements/metapwr-recharge-wild-strawberry-thumbnail-285x225.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/supplements/metapwr-recharge-wild-strawberry-thumbnail-285x225.png", "desc": "", "category": "single"}
+      ];
+
+    var METAPWR = [
+        {"id": "metapwr-recharge-strawberry", "name": "MetaPWR™ Recharge Morango", "nameEn": "MetaPWR™ Recharge Morango", "itemField": "ITEM_31801__C12183", "price": 302.5, "wholesale": 226.88, "size": "30 Sticks", "image": "https://prd-evo-content.doterra.com/europe/images/products/supplements/metapwr-recharge-wild-strawberry-thumbnail-285x225.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/supplements/metapwr-recharge-wild-strawberry-thumbnail-285x225.png", "desc": "", "category": "single"},
+        {"id": "metapwr-recharge", "name": "MetaPWR™ Recharge", "nameEn": "MetaPWR™ Recharge", "itemField": "ITEM_31802__C12080", "price": 302.5, "wholesale": 226.88, "size": "30 Sticks", "image": "https://prd-evo-content.doterra.com/europe/images/products/supplements/metapwr-recharge-thumbnail-285x225.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/supplements/metapwr-recharge-thumbnail-285x225.png", "desc": "", "category": "single"},
+        {"id": "metapwr-system", "name": "MetaPWR™ System", "nameEn": "MetaPWR™ System", "itemField": "ITEM_31802__C12080", "price": 1594.95, "wholesale": 1196.25, "size": "System", "image": "https://prd-evo-content.doterra.com/europe/images/products/collections/2025/metapwr-range-advantage-pomegranate-cherry-eu-506x225px.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/collections/2025/metapwr-range-advantage-pomegranate-cherry-eu-506x225px.png", "desc": "", "category": "single"},
+        {"id": "metapwr", "name": "MetaPWR™", "nameEn": "MetaPWR™", "itemField": "ITEM_24864__C7557", "price": 247.45, "wholesale": 185.57, "size": "15 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/metapwr-15ml-thumbnail-285x225.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/metapwr-15ml-thumbnail-285x225.png", "desc": "", "category": "single"},
+        {"id": "metapwr-advantage", "name": "MetaPWR™ Advantage", "nameEn": "MetaPWR™ Advantage", "itemField": "ITEM_28241__C9281", "price": 705.82, "wholesale": 529.38, "size": "30 Sticks", "image": "https://prd-evo-content.doterra.com/europe/images/products/supplements/metapwr-advantage-thumbnail-285x225.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/supplements/metapwr-advantage-thumbnail-285x225.png", "desc": "", "category": "single"},
+        {"id": "metapwr-advantage-pomegranate", "name": "MetaPWR™ Advantage Romã-Cereja", "nameEn": "MetaPWR™ Advantage Romã-Cereja", "itemField": "ITEM_31342__C12686", "price": 705.82, "wholesale": 529.38, "size": "30 Sticks", "image": "https://prd-evo-content.doterra.com/europe/images/products/supplements/metapwr-advantage-pom-cherry-thumbnail-285x225.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/supplements/metapwr-advantage-pom-cherry-thumbnail-285x225.png", "desc": "", "category": "single"},
+        {"id": "metapwr-assist", "name": "MetaPWR™ Assist", "nameEn": "MetaPWR™ Assist", "itemField": "ITEM_28661__C9283", "price": 260.37, "wholesale": 195.25, "size": "30 Cápsulas", "image": "https://prd-evo-content.doterra.com/europe/images/products/supplements/metapwr-assist-thumbnail-285x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/supplements/metapwr-assist-thumbnail-285x225-eu.png", "desc": "", "category": "single"},
+        {"id": "metapwr-beadlets", "name": "MetaPWR™ Pastilhas", "nameEn": "MetaPWR™ Pastilhas", "itemField": "ITEM_26181__C9285", "price": 133.87, "wholesale": 100.38, "size": "125 Pastilhas", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/metapwr-beadlets-thumbnail-285x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/metapwr-beadlets-thumbnail-285x225-eu.png", "desc": "", "category": "single"},
+        {"id": "metapwr-mito2max", "name": "MetaPWR™ Mito2Max™", "nameEn": "MetaPWR™ Mito2Max™", "itemField": "ITEM_31411__C11530", "price": 366.69, "wholesale": 275.0, "size": "60 Cápsulas Veganas", "image": "https://prd-evo-content.doterra.com/europe/images/products/supplements/metapwr-mito2max-thumbnail-285x225.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/supplements/metapwr-mito2max-thumbnail-285x225.png", "desc": "", "category": "single"},
+        {"id": "metapwr-softgels", "name": "MetaPWR™ Softgels", "nameEn": "MetaPWR™ Softgels", "itemField": "ITEM_28465__C9284", "price": 271.37, "wholesale": 203.5, "size": "90 Softgels", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/metapwr-softgels-thumbnail-285x225.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/blends/metapwr-softgels-thumbnail-285x225.png", "desc": "", "category": "single"}
+      ];
+
+    var ZENGEST = [
+        {"id": "digesttab", "name": "DigestTab™", "nameEn": "DigestTab™", "itemField": "ITEM_24743__C8065", "price": 144.81, "wholesale": 108.62, "size": "100 Comprimidos", "image": "https://prd-evo-content.doterra.com/europe/images/products/supplements/zengest-digesttab-thumbnail-285x225.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/supplements/zengest-digesttab-thumbnail-285x225.png", "desc": "", "category": "single"},
+        {"id": "zengest", "name": "ZenGest™", "nameEn": "ZenGest™", "itemField": "ITEM_19626__C2894", "price": 315.26, "wholesale": 236.45, "size": "15 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/digestzen/zengest15ml-thumbnail-84x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/digestzen/zengest15ml-thumbnail-84x225-eu.png", "desc": "", "category": "single"},
+        {"id": "zengest-softgels", "name": "ZenGest™ Softgels", "nameEn": "ZenGest™ Softgels", "itemField": "ITEM_13959__C2721", "price": 212.63, "wholesale": 159.5, "size": "60 Softgels", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/digestzen/zengest-softgels-thumbnail-285x225-ref24.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/digestzen/zengest-softgels-thumbnail-285x225-ref24.png", "desc": "", "category": "single"},
+        {"id": "zengest-touch", "name": "ZenGest™ Touch", "nameEn": "ZenGest™ Touch", "itemField": "ITEM_11341__C5325", "price": 216.31, "wholesale": 162.25, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/digestzen/zengest10ml-thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/digestzen/zengest10ml-thumbnail-50x225-eu.png", "desc": "", "category": "single"}
+      ];
+
+    var ONGUARD = [
+        {"id": "on-guard-chewables", "name": "On Guard™+ Mastigáveis", "nameEn": "On Guard™+ Mastigáveis", "itemField": "ITEM_32093__C13163", "price": 190.63, "wholesale": 143.0, "size": "60 Comprimidos", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/on-guard/onguard-chewables-thumbnail-285x225.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/on-guard/onguard-chewables-thumbnail-285x225.png", "desc": "", "category": "single"},
+        {"id": "on-guard", "name": "On Guard™", "nameEn": "On Guard™", "itemField": "ITEM_11302__C5153", "price": 331.87, "wholesale": 248.93, "size": "15 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/on-guard/onguard15ml-thumbnail-84x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/on-guard/onguard15ml-thumbnail-84x225-eu.png", "desc": "", "category": "single"},
+        {"id": "on-guard-beadlets", "name": "On Guard™ Pastilhas", "nameEn": "On Guard™ Pastilhas", "itemField": "ITEM_25037__C5476", "price": 133.87, "wholesale": 100.38, "size": "125 Pastilhas", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/on-guard/onguard-beadlets-thumbnail-285x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/on-guard/onguard-beadlets-thumbnail-285x225-eu.png", "desc": "", "category": "single"},
+        {"id": "on-guard-softgels", "name": "On Guard™+ Softgels", "nameEn": "On Guard™+ Softgels", "itemField": "ITEM_32094__C13164", "price": 220.0, "wholesale": 165.0, "size": "60 Softgels", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/on-guard/onguard-softgels-thumbnail-285x225-ref25.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/on-guard/onguard-softgels-thumbnail-285x225-ref25.png", "desc": "", "category": "single"},
+        {"id": "on-guard-touch", "name": "On Guard™ Touch", "nameEn": "On Guard™ Touch", "itemField": "ITEM_11342__C5316", "price": 231.0, "wholesale": 173.25, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/on-guard/onguard10ml-thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/on-guard/onguard10ml-thumbnail-50x225-eu.png", "desc": "", "category": "single"}
+      ];
+
+    var DEEPBLUE = [
+        {"id": "deep-blue", "name": "Deep Blue™", "nameEn": "Deep Blue™", "itemField": "ITEM_28799__C6493", "price": 322.63, "wholesale": 241.95, "size": "5 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue5ml-thumbnail-67x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue5ml-thumbnail-67x225-eu.png", "desc": "", "category": "single"},
+        {"id": "deep-blue-kit", "name": "Deep Blue™ Kit", "nameEn": "Deep Blue™ Kit", "itemField": "ITEM_31345__C11313", "price": 949.63, "wholesale": 712.25, "size": "Kit", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue5ml-thumbnail-67x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue5ml-thumbnail-67x225-eu.png", "desc": "", "category": "single"},
+        {"id": "deep-blue-roll-on", "name": "Deep Blue™ Roll-On", "nameEn": "Deep Blue™ Roll-On", "itemField": "ITEM_28778__C2722", "price": 572.06, "wholesale": 429.0, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue-rollon--thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue-rollon--thumbnail-50x225-eu.png", "desc": "", "category": "single"},
+        {"id": "deep-blue-rub", "name": "Deep Blue™ Rub", "nameEn": "Deep Blue™ Rub", "itemField": "ITEM_30063__C6635", "price": 333.74, "wholesale": 250.3, "size": "120 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue-rub-thumbnail-285x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue-rub-thumbnail-285x225-eu.png", "desc": "", "category": "single"},
+        {"id": "deep-blue-stick", "name": "Deep Blue™ Stick", "nameEn": "Deep Blue™ Stick", "itemField": "ITEM_29405__C7148", "price": 241.95, "wholesale": 181.5, "size": "48 g", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue-stick-thumbnail-285x225.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue-stick-thumbnail-285x225.png", "desc": "", "category": "single"},
+        {"id": "deep-blue-touch", "name": "Deep Blue™ Touch", "nameEn": "Deep Blue™ Touch", "itemField": "ITEM_28774__C2709", "price": 388.69, "wholesale": 291.5, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue10ml-thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue10ml-thumbnail-50x225-eu.png", "desc": "", "category": "single"}
+      ];
+
+    var AIR = [
+        {"id": "doterra-air", "name": "dōTERRA Air™", "nameEn": "dōTERRA Air™", "itemField": "ITEM_11935__C6519", "price": 262.13, "wholesale": 196.62, "size": "15 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/air/air15ml-thumbnail-84x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/air/air15ml-thumbnail-84x225-eu.png", "desc": "", "category": "single"},
+        {"id": "doterra-air-pastilhas", "name": "dōTERRA Air™ Pastilhas", "nameEn": "dōTERRA Air™ Pastilhas", "itemField": "ITEM_13947__C6540", "price": 159.5, "wholesale": 119.62, "size": "30 Pastilhas", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/air/air-drops-thumbnail-285x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/air/air-drops-thumbnail-285x225-eu.png", "desc": "", "category": "single"},
+        {"id": "doterra-air-touch", "name": "dōTERRA Air™ Touch", "nameEn": "dōTERRA Air™ Touch", "itemField": "ITEM_11340__C5322", "price": 166.81, "wholesale": 125.12, "size": "10 ml", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/air/air10ml-thumbnail-50x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/air/air10ml-thumbnail-50x225-eu.png", "desc": "", "category": "single"},
+        {"id": "doterra-air-vapour-stick", "name": "doTERRA Air™ Vapour Stick", "nameEn": "doTERRA Air™ Vapour Stick", "itemField": "ITEM_28392__C6541", "price": 132.0, "wholesale": 99.0, "size": "15,5g", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/air/air-vapour-stick-thumbnail-285x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/air/air-vapour-stick-thumbnail-285x225-eu.png", "desc": "", "category": "single"}
+      ];
+
+    var KITS = [
+        {"id": "aromatouch-kit", "name": "AromaTouch Technique™ Kit", "nameEn": "AromaTouch Technique™ Kit", "itemField": "ITEM_11533__C1596", "price": 1043.18, "wholesale": 782.38, "size": "Kit", "image": "https://prd-evo-content.doterra.com/europe/images/products/collections/kits/aromatouch-technique-kit-thumbnail-285x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/collections/kits/aromatouch-technique-kit-thumbnail-285x225-eu.png", "desc": "", "category": "single"},
+        {"id": "beginners-trio", "name": "Beginner's Trio", "nameEn": "Beginner's Trio", "itemField": "ITEM_1810__C4866", "price": 577.56, "wholesale": 433.12, "size": "Kit", "image": "https://prd-evo-content.doterra.com/europe/images/products/collections/kits/beginners-trio-thumbnail-285x225.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/collections/kits/beginners-trio-thumbnail-285x225.png", "desc": "", "category": "single"},
+        {"id": "cleanse-renew", "name": "Cleanse & Renew Kit", "nameEn": "Cleanse & Renew Kit", "itemField": "ITEM_31812__C12345", "price": 548.19, "wholesale": 411.12, "size": "Kit", "image": "https://prd-evo-content.doterra.com/europe/images/products/collections/kits/beginners-trio-thumbnail-285x225.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/collections/kits/beginners-trio-thumbnail-285x225.png", "desc": "", "category": "single"},
+        {"id": "daily-habits", "name": "Daily Habits Kit", "nameEn": "Daily Habits Kit", "itemField": "ITEM_31813__C12346", "price": 1941.5, "wholesale": 1456.12, "size": "Kit", "image": "https://prd-evo-content.doterra.com/europe/images/products/collections/kits/beginners-trio-thumbnail-285x225.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/collections/kits/beginners-trio-thumbnail-285x225.png", "desc": "", "category": "single"},
+        {"id": "daily-habits-vegan", "name": "Daily Habits Kit Vegan", "nameEn": "Daily Habits Kit Vegan", "itemField": "ITEM_31814__C12347", "price": 1941.5, "wholesale": 1456.12, "size": "Kit", "image": "https://prd-evo-content.doterra.com/europe/images/products/collections/kits/beginners-trio-thumbnail-285x225.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/collections/kits/beginners-trio-thumbnail-285x225.png", "desc": "", "category": "single"},
+        {"id": "deep-blue-kit", "name": "Deep Blue™ Kit", "nameEn": "Deep Blue™ Kit", "itemField": "ITEM_31345__C11313", "price": 949.63, "wholesale": 712.25, "size": "Kit", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue5ml-thumbnail-67x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/deep-blue/deepblue5ml-thumbnail-67x225-eu.png", "desc": "", "category": "single"},
+        {"id": "emotional-kit", "name": "Emotional Aromatherapy Kit", "nameEn": "Emotional Aromatherapy Kit", "itemField": "ITEM_31815__C12348", "price": 1237.5, "wholesale": 928.12, "size": "Kit", "image": "https://prd-evo-content.doterra.com/europe/images/products/collections/kits/beginners-trio-thumbnail-285x225.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/collections/kits/beginners-trio-thumbnail-285x225.png", "desc": "", "category": "single"},
+        {"id": "family-essentials", "name": "Family Essentials Kit", "nameEn": "Family Essentials Kit", "itemField": "ITEM_10939__C1381", "price": 979.0, "wholesale": 734.25, "size": "Kit", "image": "https://prd-evo-content.doterra.com/europe/images/products/collections/kits/family-essentials-kit-thumbnail-285x225.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/collections/kits/family-essentials-kit-thumbnail-285x225.png", "desc": "", "category": "single"},
+        {"id": "home-essentials", "name": "Home Essentials Kit", "nameEn": "Home Essentials Kit", "itemField": "ITEM_31816__C12349", "price": 1595.0, "wholesale": 1196.25, "size": "Kit", "image": "https://prd-evo-content.doterra.com/europe/images/products/collections/kits/beginners-trio-thumbnail-285x225.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/collections/kits/beginners-trio-thumbnail-285x225.png", "desc": "", "category": "single"},
+        {"id": "metapwr-system", "name": "MetaPWR™ System Kit", "nameEn": "MetaPWR™ System Kit", "itemField": "ITEM_31802__C12080", "price": 1594.95, "wholesale": 1196.25, "size": "Kit", "image": "https://prd-evo-content.doterra.com/europe/images/products/collections/2025/metapwr-range-advantage-pomegranate-cherry-eu-506x225px.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/collections/2025/metapwr-range-advantage-pomegranate-cherry-eu-506x225px.png", "desc": "", "category": "single"},
+        {"id": "nature-solutions", "name": "Nature's Solutions Kit", "nameEn": "Nature's Solutions Kit", "itemField": "ITEM_31817__C12350", "price": 1855.37, "wholesale": 1391.5, "size": "Kit", "image": "https://prd-evo-content.doterra.com/europe/images/products/collections/kits/beginners-trio-thumbnail-285x225.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/collections/kits/beginners-trio-thumbnail-285x225.png", "desc": "", "category": "single"},
+        {"id": "on-guard-kit", "name": "On Guard™ Kit", "nameEn": "On Guard™ Kit", "itemField": "ITEM_31818__C12351", "price": 636.19, "wholesale": 477.12, "size": "Kit", "image": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/on-guard/onguard15ml-thumbnail-84x225-eu.png", "thumb": "https://prd-evo-content.doterra.com/europe/images/products/essential-oils/on-guard/onguard15ml-thumbnail-84x225-eu.png", "desc": "", "category": "single"}
+      ];
+
+    // ============================================================
+    // STATE
+    // ============================================================
+    var cart = [];
+    var activeFilter = 'all';
+
+    // ============================================================
+    // FORMAT CURRENCY
+    // ============================================================
+    function formatBRL(val) {
+      return 'R$ ' + val.toFixed(2).replace('.', ',');
+    }
+
+    // ============================================================
+    // RENDER PRODUCTS (main section)
+    // ============================================================
+    function renderProducts() {
+      var search = document.getElementById('searchInput').value.toLowerCase();
+      var filtered = PRODUCTS;
+      if (activeFilter !== 'all') {
+        filtered = filtered.filter(function(p) { return p.category === activeFilter; });
+      }
+      if (search) {
+        filtered = filtered.filter(function(p) {
+          return p.name.toLowerCase().includes(search) ||
+            (p.nameEn && p.nameEn.toLowerCase().includes(search)) ||
+            p.desc.toLowerCase().includes(search);
+        });
+      }
+      document.getElementById('productGrid').innerHTML = filtered.map(function(p, i) {
+        return renderCard(p, i);
+      }).join('');
+    }
+
+    // ============================================================
+    // RENDER A SINGLE PRODUCT CARD
+    // ============================================================
+    function renderCard(p, i) {
+      var delay = (i % 12) * 0.05;
+      return '<div class="product-card" style="animation-delay:' + delay + 's">' +
+        '<div class="product-img"><img src="' + p.thumb + '" alt="' + p.name + '" loading="lazy"></div>' +
+        '<div class="product-info">' +
+          '<div class="product-name">' + p.name + '</div>' +
+          (p.nameEn && p.nameEn !== p.name ? '<div class="product-name-en">' + p.nameEn + '</div>' : '') +
+          (p.desc ? '<div class="product-desc">' + p.desc + '</div>' : '') +
+          '<div class="product-meta">' +
+            '<div class="price-block">' +
+              '<span class="price-label">Membro</span>' +
+              '<span class="price-wholesale">' + formatBRL(p.wholesale) + '</span>' +
+              '<span class="price-retail">' + formatBRL(p.price) + '</span>' +
+              '<span class="price-badge">&minus;25%</span>' +
+            '</div>' +
+            '<div class="product-size">' + p.size + '</div>' +
+            '<button class="add-btn" onclick="addToCart(\'' + p.itemField + '\', \'' + p.name.replace(/'/g, "\\'") + '\', ' + p.wholesale + ', \'' + p.size + '\', \'' + p.thumb + '\', event)">' +
+              '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>' +
+              '+ Carrinho' +
+            '</button>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+    }
+
+    // ============================================================
+    // RENDER CATEGORY SECTION
+    // ============================================================
+    function renderSection(items, gridId) {
+      var grid = document.getElementById(gridId);
+      if (!grid) return;
+      grid.innerHTML = items.map(function(p, i) {
+        return renderCard(p, i);
+      }).join('');
+    }
+
+    // ============================================================
+    // RENDER FILTERS
+    // ============================================================
+    function renderFilters() {
+      var pills = document.querySelectorAll('.filter-pill');
+      pills.forEach(function(pill) {
+        var filter = pill.getAttribute('onclick').match(/setFilter\('([^']+)'\)/);
+        if (filter) {
+          pill.classList.toggle('active', filter[1] === activeFilter);
+        }
+      });
+    }
+
+    function setFilter(key) {
+      activeFilter = key;
+      renderFilters();
+      renderProducts();
+    }
+
+    function filterProducts() {
+      renderProducts();
+    }
+
+    // ============================================================
+    // CART FUNCTIONS
+    // ============================================================
+    function addToCart(itemField, name, price, size, image, evt) {
+      var btn = evt ? (evt.target.closest ? evt.target.closest('.add-btn') : evt.target) : null;
+      var existing = cart.find(function(c) { return c.itemField === itemField; });
+      if (existing) {
+        existing.qty++;
+      } else {
+        cart.push({ itemField: itemField, name: name, price: price, size: size, image: image, qty: 1 });
+      }
+      updateCartUI();
+      showToast(name + ' adicionado ao carrinho!');
+      // Brief button animation
+      if (btn) {
+        btn.style.background = '#2ecc71';
+        btn.textContent = '\u2713 Adicionado';
+        setTimeout(function() {
+          btn.style.background = '';
+          btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>+ Carrinho';
+        }, 1000);
+      }
+    }
+
+    function removeFromCart(itemField) {
+      cart = cart.filter(function(c) { return c.itemField !== itemField; });
+      updateCartUI();
+    }
+
+    function updateQty(itemField, delta) {
+      var item = cart.find(function(c) { return c.itemField === itemField; });
+      if (item) {
+        item.qty += delta;
+        if (item.qty <= 0) {
+          removeFromCart(itemField);
+          return;
+        }
+      }
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      var count = cart.reduce(function(a, c) { return a + c.qty; }, 0);
+      var total = cart.reduce(function(a, c) { return a + c.price * c.qty; }, 0);
+      document.getElementById('cartCount').textContent = count;
+      document.getElementById('cartTotal').textContent = formatBRL(total);
+      document.getElementById('checkoutBtn').disabled = cart.length === 0;
+      var itemsEl = document.getElementById('cartItems');
+      if (cart.length === 0) {
+        itemsEl.innerHTML = '<div class="cart-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg><p>Seu carrinho está vazio</p></div>';
+      } else {
+        itemsEl.innerHTML = cart.map(function(c) {
+          return '<div class="cart-item">' +
+            '<img class="cart-item-img" src="' + c.image + '" alt="' + c.name + '">' +
+            '<div class="cart-item-info">' +
+              '<div class="cart-item-name">' + c.name + '</div>' +
+              '<div class="cart-item-size">' + c.size + '</div>' +
+              '<div class="cart-item-price">' + formatBRL(c.price * c.qty) + '</div>' +
+              '<div class="cart-item-qty">' +
+                '<button class="qty-btn" onclick="updateQty(\'' + c.itemField + '\', -1)">&minus;</button>' +
+                '<span>' + c.qty + '</span>' +
+                '<button class="qty-btn" onclick="updateQty(\'' + c.itemField + '\', 1)">+</button>' +
+              '</div>' +
+            '</div>' +
+            '<button class="cart-item-remove" onclick="removeFromCart(\'' + c.itemField + '\')">Remover</button>' +
+          '</div>';
+        }).join('');
+      }
+    }
+
+    function toggleCart() {
+      var overlay = document.getElementById('cartOverlay');
+      overlay.classList.toggle('open');
+      document.body.style.overflow = overlay.classList.contains('open') ? 'hidden' : '';
+    }
+
+    // ============================================================
+    // CHECKOUT
+    // ============================================================
+    function checkout() {
+      if (cart.length === 0) return;
+      document.getElementById('checkoutModal').classList.add('open');
+    }
+
+    function closeCheckoutModal() {
+      document.getElementById('checkoutModal').classList.remove('open');
+    }
+
+    function submitCheckout(e) {
+      e.preventDefault();
+      doCheckoutNavigation(cart.map(function(c) { return [c.itemField, c.qty]; }));
+    }
+
+    function skipCheckout() {
+      doCheckoutNavigation(cart.map(function(c) { return [c.itemField, c.qty]; }));
+    }
+
+    function doCheckoutNavigation(items) {
+      var ownerID = CONFIG.ownerID;
+      var shopBase = CONFIG.shopBase || 'https://shop.doterra.com/BR/pt_BR/shop/';
+      var btn = document.querySelector('.cp-checkout') || document.querySelector('.checkout-btn');
+      if (btn) { btn.disabled = true; btn.textContent = 'Carregando...'; }
+
+      // Build form fields — SaveCart and FuseAction are required by doTERRA
+      var baseFields = { 'SaveCart': '1', 'FuseAction': 'Modules.CartContents_UpdateCart', 'OwnerID': ownerID };
+      var popupName = 'doTERRA_checkout_' + Date.now();
+      var popup = window.open('about:blank', popupName, 'width=1,height=1,left=-100,top=-100');
+      var form = document.createElement('form');
+      form.method = 'POST';
+      form.action = shopBase + 'my-bag/?OwnerID=' + encodeURIComponent(ownerID);
+      form.target = popupName;
+
+      // Add base fields
+      for (var key in baseFields) {
+        var inp = document.createElement('input');
+        inp.type = 'hidden'; inp.name = key; inp.value = baseFields[key];
+        form.appendChild(inp);
+      }
+
+      // Add items
+      items.forEach(function(it) {
+        var field = it[0];
+        var qty = it[1];
+        if (field) {
+          var inp = document.createElement('input');
+          inp.type = 'hidden';
+          inp.name = field;
+          inp.value = qty;
+          form.appendChild(inp);
+        }
+      });
+
+      document.body.appendChild(form);
+      form.submit();
+      form.remove();
+
+      // Step 2: Wait for cart to save, then redirect main window to enrollment
+      setTimeout(function() {
+        try { if (popup && !popup.closed) popup.close(); } catch(e) {}
+        window.location.href = 'https://shop.doterra.com/BR/pt_BR/create-account/?fromretail=1&EnrollerID=' + ownerID;
+      }, 3000);
+    }
+
+    // ============================================================
+    // TOAST
+    // ============================================================
+    function showToast(msg) {
+      var toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(function() { toast.classList.remove('show'); }, 2500);
+    }
+
+    // ============================================================
+    // NAV HELPERS
+    // ============================================================
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+
+    function closeMenu() {
+      document.getElementById('navLinks').classList.remove('open');
+    }
+
+    // ============================================================
+    // COOKIES
+    // ============================================================
+    function acceptCookies() {
+      document.getElementById('cookieBanner').style.display = 'none';
+      try { localStorage.setItem('cookies_accepted', '1'); } catch(e) {}
+    }
+
+    function declineCookies() {
+      document.getElementById('cookieBanner').style.display = 'none';
+      try { localStorage.setItem('cookies_accepted', '0'); } catch(e) {}
+    }
+
+    // ============================================================
+    // INIT
+    // ============================================================
+    (function init() {
+      renderProducts();
+      renderSection(BLENDS, 'blendsGrid');
+      renderSection(ROLLONS, 'rollonsGrid');
+      renderSection(SUPPLEMENTS, 'supplementsGrid');
+      renderSection(METAPWR, 'metapwrGrid');
+      renderSection(ZENGEST, 'zengestGrid');
+      renderSection(ONGUARD, 'onguardGrid');
+      renderSection(DEEPBLUE, 'deepblueGrid');
+      renderSection(AIR, 'airGrid');
+      renderSection(KITS, 'kitsGrid');
+
+      // Show cookie banner if not already decided
+      try {
+        if (!localStorage.getItem('cookies_accepted')) {
+          document.getElementById('cookieBanner').style.display = 'flex';
+        }
+      } catch(e) {
+        document.getElementById('cookieBanner').style.display = 'flex';
+      }
+
+      // Navbar scroll shadow
+      window.addEventListener('scroll', function() {
+        var nav = document.querySelector('.navbar');
+        if (window.scrollY > 10) {
+          nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)';
+        } else {
+          nav.style.boxShadow = 'none';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
