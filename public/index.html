@@ -565,58 +565,7 @@
     }
     .toast.show { transform: translateX(-50%) translateY(0); }
 
-    /* Checkout Modal */
-    .checkout-modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0,0,0,0.6);
-      z-index: 2500;
-      display: none;
-      align-items: center;
-      justify-content: center;
-    }
-    .checkout-modal-overlay.open { display: flex; }
-    .checkout-modal {
-      background: white;
-      border-radius: var(--radius);
-      padding: 40px;
-      max-width: 480px;
-      width: 90%;
-      max-height: 90vh;
-      overflow-y: auto;
-    }
-    .checkout-modal h3 {
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 8px;
-      color: var(--c-primary-dark);
-    }
-    .checkout-modal p {
-      font-size: 14px;
-      color: var(--c-text-light);
-      margin-bottom: 24px;
-    }
-    .checkout-modal label {
-      display: block;
-      font-size: 13px;
-      font-weight: 500;
-      margin-bottom: 4px;
-      color: var(--c-text);
-    }
-    .checkout-modal input {
-      width: 100%;
-      padding: 10px 14px;
-      border: 1.5px solid var(--c-border);
-      border-radius: var(--radius-sm);
-      font-size: 14px;
-      margin-bottom: 16px;
-      font-family: var(--font);
-      outline: none;
-    }
-    .checkout-modal input:focus { border-color: var(--c-primary); }
+        /* Checkout modal removed - direct redirect */
     .modal-submit {
       width: 100%;
       padding: 14px;
@@ -911,31 +860,7 @@
   </div>
 
   <!-- Checkout Modal -->
-  <div id="checkoutModal" class="checkout-modal-overlay" onclick="closeCheckoutModal()">
-    <div class="checkout-modal" onclick="event.stopPropagation()">
-      <h3>Quase lá!</h3>
-      <p>Preencha seus dados para que estejam prontos no checkout da doTERRA.</p>
-      <form id="checkoutForm" onsubmit="submitCheckout(event)">
-        <label>Nome</label>
-        <input type="text" id="cfFirst" placeholder="Nome">
-        <label>Sobrenome</label>
-        <input type="text" id="cfLast" placeholder="Sobrenome">
-        <label>E-mail</label>
-        <input type="email" id="cfEmail" placeholder="seu@email.com">
-        <label>Telefone (opcional)</label>
-        <input type="tel" id="cfPhone" placeholder="(00) 00000-0000">
-        <label>Endereco</label>
-        <input type="text" id="cfStreet" placeholder="Rua e numero">
-        <label>CEP</label>
-        <input type="text" id="cfZip" placeholder="00000-000">
-        <label>Cidade</label>
-        <input type="text" id="cfCity" placeholder="Cidade">
-        <button type="submit" class="modal-submit">Ir para o checkout seguro</button>
-      </form>
-      <button class="modal-skip" onclick="skipCheckout()">Continuar sem dados &rarr;</button>
-    </div>
-  </div>
-
+      <!-- Checkout now redirects directly to doTERRA -->
   <!-- Toast -->
   <div id="toast" class="toast"></div>
 
@@ -1259,19 +1184,6 @@
     // ============================================================
     function checkout() {
       if (cart.length === 0) return;
-      document.getElementById('checkoutModal').classList.add('open');
-    }
-
-    function closeCheckoutModal() {
-      document.getElementById('checkoutModal').classList.remove('open');
-    }
-
-    function submitCheckout(e) {
-      e.preventDefault();
-      doCheckoutNavigation(cart.map(function(c) { return [c.itemField, c.qty]; }));
-    }
-
-    function skipCheckout() {
       doCheckoutNavigation(cart.map(function(c) { return [c.itemField, c.qty]; }));
     }
 
@@ -1281,23 +1193,18 @@
       var btn = document.querySelector('.cp-checkout') || document.querySelector('.checkout-btn');
       if (btn) { btn.disabled = true; btn.textContent = 'Carregando...'; }
 
-      // Build form fields — SaveCart and FuseAction are required by doTERRA
-      var baseFields = { 'SaveCart': '1', 'FuseAction': 'Modules.CartContents_UpdateCart', 'OwnerID': ownerID };
-      var popupName = 'doTERRA_checkout_' + Date.now();
-      var popup = window.open('about:blank', popupName, 'width=1,height=1,left=-100,top=-100');
       var form = document.createElement('form');
       form.method = 'POST';
-      form.action = shopBase + 'my-bag/?OwnerID=' + encodeURIComponent(ownerID);
-      form.target = popupName;
+      form.action = shopBase + 'my-bag/' + '?OwnerID=' + encodeURIComponent(ownerID);
+      form.style.display = 'none';
 
-      // Add base fields
-      for (var key in baseFields) {
+      var fields = { 'SaveCart': '1', 'FuseAction': 'Modules.CartContents_UpdateCart', 'OwnerID': ownerID };
+      for (var key in fields) {
         var inp = document.createElement('input');
-        inp.type = 'hidden'; inp.name = key; inp.value = baseFields[key];
+        inp.type = 'hidden'; inp.name = key; inp.value = fields[key];
         form.appendChild(inp);
       }
 
-      // Add items
       items.forEach(function(it) {
         var field = it[0];
         var qty = it[1];
@@ -1312,13 +1219,6 @@
 
       document.body.appendChild(form);
       form.submit();
-      form.remove();
-
-      // Step 2: Wait for cart to save, then redirect main window to enrollment
-      setTimeout(function() {
-        try { if (popup && !popup.closed) popup.close(); } catch(e) {}
-        window.location.href = 'https://shop.doterra.com/BR/pt_BR/create-account/?fromretail=1&EnrollerID=' + ownerID;
-      }, 3000);
     }
 
     // ============================================================
