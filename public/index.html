@@ -168,41 +168,42 @@
 
     /* Social Proof */
     .social-proof {
-      padding: 48px 24px;
-      background: white;
+      padding: 12px 24px;
+      background: #f8f7ff;
+      border-bottom: 1px solid #eee;
     }
     .social-proof .inner {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
     }
-    .proof-item { padding: 16px; }
-    .proof-item .icon { font-size: 24px; margin-bottom: 8px; color: var(--c-primary); }
-    .proof-item strong { display: block; font-size: 14px; color: var(--c-text); margin-bottom: 4px; }
-    .proof-item span { font-size: 12px; color: var(--c-text-light); }
+    .proof-item { display: flex; align-items: center; gap: 6px; padding: 0; }
+    .proof-item .icon { font-size: 16px; margin-bottom: 0; color: var(--c-primary); }
+    .proof-item strong { display: inline; font-size: 13px; color: var(--c-text); margin-bottom: 0; }
+    .proof-item span { display: none; }
 
     /* Products Section */
     .section {
-      padding: 64px 24px;
+      padding: 32px 24px;
       max-width: 1200px;
       margin: 0 auto;
     }
     .section-header {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 24px;
     }
     .section-header h2 {
-      font-size: 2.8rem;
+      font-size: 2rem;
       font-weight: 800;
       color: var(--c-primary-dark);
-      margin-bottom: 12px;
+      margin-bottom: 8px;
       letter-spacing: -0.5px;
     }
     .section-header p {
-      font-size: 1.05rem;
+      font-size: 0.95rem;
       color: var(--c-text-light);
     }
 
@@ -355,16 +356,16 @@
 
     /* Blends Sections */
     .blends-section {
-      padding: 64px 24px;
+      padding: 32px 24px;
       max-width: 1200px;
       margin: 0 auto;
     }
     .blends-section .section-header {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 24px;
     }
     .blends-section .section-header h2 {
-      font-size: 2.2rem;
+      font-size: 1.8rem;
       font-weight: 800;
       color: var(--c-primary-dark);
     }
